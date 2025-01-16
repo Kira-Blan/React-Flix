@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+../node_modules/
+
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -41,3 +44,5 @@ flix/eslint.config.js
 flix/node_modules/
 flix/public/
 flix/src/
+
+../node_modules/
