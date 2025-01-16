@@ -1,0 +1,29 @@
+Header {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+  }
+  
+  .header {
+      background-color: black;
+      height: 6rem;
+      width: 100%;
+      position: sticky;
+      top: 0;
+    }
+  
+    .logo {
+      float: left;
+      padding: 2rem 3rem 0;
+      width: 12%;
+      height: auto;
+    }
+    
+    .home, .nuevo-video {    
+      float: right;
+      width: 8.5rem;
+      height: 3rem;
+      margin: 1.5rem 3rem 0rem 0;   
+      border-radius: 15px;
+      border: blue solid 2px;
+    }

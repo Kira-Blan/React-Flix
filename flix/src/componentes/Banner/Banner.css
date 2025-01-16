@@ -1,0 +1,27 @@
+Banner  {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+  }
+
+.banner {   
+    width: 100%;
+    
+        
+}
+
+/*.banner-container {
+    /*width: 80%;*/
+   /* height: 90vh;   
+}
+
+.banner-info {
+    position: absolute;
+    /*display: flex;*/
+  /*  width: 100%;
+    z-index: 1; 
+    justify-content: space-around;
+    /*align-items: center;*/
+ /*   padding-left: 3rem;
+    margin: 3.3rem 0;
+}
