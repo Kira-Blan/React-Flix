@@ -6,6 +6,8 @@ import Header from './componentes/Header/Header'
 import Banner from './componentes/Banner/Banner'
 import Formulario from './componentes/Formulario/Formulario'
 import Videos from './componentes/Videos/Videos'
+//import NuevoVideo from './componentes/NuevoVideo/NuevoVideo'
+
 
 {/*const videos = [
 
@@ -28,14 +30,22 @@ import Videos from './componentes/Videos/Videos'
 
 
 function App() {
-  return (    
+  const [mostarFormulario, actualizarFormulario] =useState(true)
+
+  const cambiarMostrar = () => {
+    actualizarMostrar(!mostarFormulario)
+  }
+
+  return (      
           <div>
        <Header />       
       <div className='banner-container'>
       <Banner />      
     </div>
-    <Formulario />
-    <Videos />
+   {/*} <Formulario />
+        {mostarFormulario && <Formulario />} 
+    
+    {/*<NuevoVideo />*/}
 </div>
   );
 }
