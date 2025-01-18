@@ -1,4 +1,4 @@
-{/*import "../NuevoVideo.css"
+import "../NuevoVideo/NuevoVideo.css"
 import Formulario from "../Formulario/Formulario"
 
 const NuevoVideo = () => {
@@ -6,4 +6,4 @@ const NuevoVideo = () => {
 
     </section>
 }
-export default NuevoVideo*/}
+export default NuevoVideo

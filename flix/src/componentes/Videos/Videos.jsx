@@ -1,15 +1,17 @@
-import '../Videos/Videos.css'
+import '../Videos/Videos'
+import Colaborador from '../MiFlix/Colaborador/Colaborador'
 
-const Videos = () => {
+const Videos = (props) => {
 
-    {/*const { colorSecundario, titulo } = props.datos 
+    const { colorPrimario, colorSecundario, titulo} = props.datos 
+    const obj = {backgroundColor: colorSecundario}
+    const estiloTitulo = {borderColor: colorPrimario}
 
-    const obj = {
-        backgroundColor: colorSecundario
-    }
-*/}
-    return <section className='videos'>
-        <h3>Front</h3>
+    return <section className='seccion-videos' style={obj}>
+        <h3 style={{ estiloTitulo }}>{titulo}</h3>
+        <div className='colaboradores'>
+            <Colaborador />
+        </div>
     </section>
 }
 

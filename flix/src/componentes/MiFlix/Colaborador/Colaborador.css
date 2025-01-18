@@ -1,0 +1,17 @@
+.colaborador {
+    display: flex;
+    justify-content: center;
+    /*align-items: flex-end;*/
+    margin-top: 2rem;
+   
+}
+
+.video {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.eliminar-video {
+    background-color: blue;
+}

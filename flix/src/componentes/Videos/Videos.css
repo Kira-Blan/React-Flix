@@ -1,0 +1,23 @@
+.seccion-videos {
+    width: 100%;
+    padding: 32px;   
+    box-sizing: border-box;
+    text-align: center;
+    height: 30rem;
+          
+}
+
+.seccion-videos h3 {
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 4px solid;
+    display: inline-block;
+    height: 3rem;
+}
+
+.colaborador {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
