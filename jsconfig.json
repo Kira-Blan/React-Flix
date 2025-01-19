@@ -1,0 +1,7 @@
+// Carpeta base: src para trabajar las rutas del proyecto
+{
+    "compilerOptions": {
+        "baseUrl": "src"
+    },
+    "includde": ["src"]
+}
