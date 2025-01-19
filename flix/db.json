@@ -1,0 +1,76 @@
+{
+    "videos": [
+      {
+        "id": "1",
+        "titulo": "Consejos de CSS FlexBox para comenzar",       
+        "url":"https://www.youtube.com/watch?v=EB4vWLzfVcI&t=2s",
+        "categoria": "Front End"
+      },
+      {
+        "id": "2",
+        "titulo": "¿Cuándo usar let, var y const?",    
+        "url": "https://www.youtube.com/watch?v=PztCEdIJITY&t=2s",
+        "categoria": "Front End"
+      },
+      {
+        "id": "3",
+        "titulo": "Como aplicar Dark Mode en tu proyecto" ,      
+        "url": "https://www.youtube.com/watch?v=MxlxFhzGRV8&t=1s",
+        "categoria": "Front End"
+      },
+      {
+        "id": "4",
+        "titulo": "Creando una base de datos MySQL para tu proyecto Java con Spring",      
+        "url":"https://www.youtube.com/watch?v=59TU5iAd174",
+        "categoria": "Back End"
+      },
+      {
+        "id": "5",
+        "titulo": "¿Qué es la Programación Orientada a Objetos?" ,     
+        "url": "https://www.youtube.com/watch?v=Oigen2sjagk",
+        "categoria": "Back End"
+      },
+      {
+        "id": "6",
+        "titulo": "Simplificando tu código en Java: Conoce los enum ",     
+        "url": "https://www.youtube.com/watch?v=EoPvlE85XAQ",
+        "categoria": "Back End"
+      },
+      {
+        "id": "7",
+        "titulo": "Comunicación en el día a día",
+        "url": "https://www.youtube.com/watch?v=pOYyav4qx7o",
+        "categoria": "Innovación y gestión"
+      },
+      {
+        "id": "8",
+        "titulo": "¿Cómo conseguir tu primera oportunidad laboral en el área de la tecnología?",
+       "url": "https://www.youtube.com/watch?v=vBN-DQYu5RY",
+        "categoria": "Innovación y gestión"
+      },
+      {
+        "id": "9",
+        "titulo": "Motivación y Buenos Hábitos: Claves para Estudiar con Éxito",
+        "url": "https://www.youtube.com/watch?v=TNJbxPaB6cA",
+        "categoria": "Innovación y gestión"
+      }
+    ],
+    "categorias": [
+      {
+        "id": "1",
+        "nombre": "Front End",
+        "color": "#6BD1FF"
+      },
+      {
+        "id": "2",
+        "nombre": "Back End",
+        "color": "#00C86F"
+      },
+      {
+        "id": "3",
+        "nombre": "Innovación y Gestión",
+        "color": "#FFBA05"
+      }
+    ]
+  }
+  

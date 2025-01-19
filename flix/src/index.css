@@ -1,3 +1,11 @@
+:root {
+    --blanco: #fff;
+    --negro: #222;
+    --gris: #e2e2e2;
+}
+
 body {
     margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
 }

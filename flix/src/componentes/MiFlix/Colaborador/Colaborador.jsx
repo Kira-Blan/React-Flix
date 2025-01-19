@@ -2,7 +2,8 @@ import React, { useState } from "react"
 import "../Colaborador/Colaborador.css"
 import Formulario from "../../Formulario/Formulario"
 
-const Colaborador = (prps) => {
+const Colaborador = () => {
+    
     
     const [videos, setVideos] = useState([])
     

@@ -7,6 +7,7 @@ import './App.css'
 import Header from './componentes/Header/Header'
 import Banner from './componentes/Banner/Banner'
 import Formulario from './componentes/Formulario/Formulario'
+
 import Videos from './componentes/Videos/Videos'
 //import NuevoVideo from './componentes/NuevoVideo/NuevoVideo'
 import Footer from './componentes/Footer/Footer';
@@ -34,42 +35,42 @@ function App() {
   }
 ])
 
-const [video, actualizarSeccionVideos] = useState([
+const [seccionVideos, actualizarSeccionVideos] = useState([
   {
-    id: uuid(),
+    id: 1,
     titulo: "Front End",
     colorPrimario: "#4cc9f0",
     colorSecundario: "#48bfe3"
   },
   {
-    id: uuid(),
+    id: 2,
     titulo: "Back End",
     colorPrimario: "#72efdd",
     colorSecundario: "#80ffdb"
   },
   {
-    id: uuid(),
+    id: 3,
     titulo: "Innovación y Gestión",
     colorPrimario: "#00cfc1",
     colorSecundario: "#44e5e7"
   }
 ])
 
-  const cambiarMostrar = () => {
-    actualizarMostrar(!mostarFormulario)
-  }
+ // const cambiarMostrar = () => {
+  //  actualizarMostrar(!mostarFormulario)
+ // }
 
   //Registrar video
-  const registrarVideo = (videos) => {
-    console.log("Nuevo video:", videos)
+ // const registrarVideo = (videos) => {
+  //  console.log("Nuevo video:", videos)
     //Spread operator
-    actualizarVideos([...Videos, video])
-  }
+  //  actualizarVideos([...Videos, video])
+ // }
 
   // Eliminar video
-  const eliminarVideo = (id) => {
-    console.log("Eliminar video", id)
-  } 
+ // const eliminarVideo = (id) => {
+  // console.log("Eliminar video", id)
+  //} 
 
   return (
     <div>
@@ -77,11 +78,12 @@ const [video, actualizarSeccionVideos] = useState([
       <Banner />
     {/*}  <MiFlix cambiarMostrar={cambiarMostrar} /> */}
     <div>
-      <Videos 
-      datos={videos}
-      key={videos.titulo}
-      videos={videos.filter(videos => videos.videos === videos.titulo)}
-      eliminarVideo={eliminarVideo}
+     
+      <Videos secciones={seccionVideos}
+     // datos={videos}
+     // key={videos.titulo}
+     // videos={videos.filter(videos => videos.videos === videos.titulo)}
+     // eliminarVideo={eliminarVideo}
      />      
     </div>
     <Footer />
