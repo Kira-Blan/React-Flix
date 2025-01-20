@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import '../Videos/Videos.css'
-//import Colaborador from '../MiFlix/Colaborador/Colaborador'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+
 import Card from '../Card/Card'
 
 const getVideoId = (url) => {
@@ -48,6 +50,31 @@ const Videos = (props) => {
     }, [])
         console.log("Videos agrupados por categoría:", videosPorCategoria)
 
+        //Eliminar video
+        const manejarEliminar =async (id) => {
+            try {
+                await fetch(`http://localhost:3001/videos/${id}`, {
+                    method: 'DELETE', 
+                })
+
+                //Actualizar estado
+                const updatedVideos = videos.filter((video) => video.id !== id)
+                setVideos(updatedVideos)
+
+                //Reorganizar videos por categoría
+                const updatedVideosPorCategoria = categorias.reduce((acc,categoria) => {
+                    acc[categoria.nombre] = updatedVideos.filter(
+                        (video) => video.categoria ===categoria.nombre
+                    )
+                    return acc
+                }, {})
+
+                setVideosPorCategoria(updatedVideosPorCategoria)
+            }catch (error) {
+                console.error('Error al eliminar video:', error)
+            }
+        }
+
     return (
         <div className='seccion-videos'>
             <h1>Videos</h1>
@@ -73,6 +100,12 @@ const Videos = (props) => {
                                         picture-in-picture"
                                         allowFullScreen
                                     ></iframe>
+                                    <button
+                                        className="delete-button"
+                                        onClick={() => manejarEliminar(video.id)}
+                                    >
+                                        <FontAwesomeIcon icon={faTrash} className='trash'/>
+                                    </button>
                                 </div>
                             ))
                         ) : (
