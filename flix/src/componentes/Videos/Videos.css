@@ -1,23 +1,43 @@
 .seccion-videos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
-    padding: 32px;   
-    box-sizing: border-box;
-    text-align: center;
-    height: 30rem;
-          
+    padding: 2rem;   
+    box-sizing: border-box;   
+    height: auto;          
 }
 
-.seccion-videos h3 {
-    font-size: 2rem;
-    text-align: center;
-    border-bottom: 4px solid;
+h1 {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.seccion-videos h3 {    
+    font-size: 1.5rem;    
+    justify-content: center;
     display: inline-block;
     height: 3rem;
+    
 }
 
-.colaborador {
+.card {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    flex-wrap: wrap;      
+}
+
+.iframe {
+    width: 30%;    
+    margin-bottom: 1rem;    
 }

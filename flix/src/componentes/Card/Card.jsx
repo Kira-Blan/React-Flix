@@ -7,7 +7,7 @@ const Card = () => {
     //Obtener los datos del db.json
     useEffect(() => {
         //Realiza la petición HTTP para obtener los datos
-        fetch('https://localhost:3000/videos')
+        fetch('http://localhost:3001/videos')
             .then((response) => response.json())
             .then((data) => setVideos(data))
             .catch((error) => console.error('Error al obtener los videos:', error))
@@ -18,11 +18,11 @@ const Card = () => {
         <section className="videos-section">
             
             {videos.length > 0 ? (
-                videos.map((video) => (
-                    <div key={video.id} className="card">
-                        <h3>{video.titulo}</h3>
-                        <p>{video.descripcion}</p>
-                        <img src={video.imagen} alt={video.titulo} />
+                videos.map((videos) => (
+                    <div key={videos.id} className="card">
+                        <h3>{videos.titulo}</h3>
+                        
+                        <img src={videos.imagen} alt={videos.titulo} />
                     </div>
                 ))
             ) : (
@@ -33,4 +33,4 @@ const Card = () => {
     )
 }
 
-export default Card
+export default Card 

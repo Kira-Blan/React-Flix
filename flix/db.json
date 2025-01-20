@@ -40,20 +40,21 @@
         "id": "7",
         "titulo": "Comunicación en el día a día",
         "url": "https://www.youtube.com/watch?v=pOYyav4qx7o",
-        "categoria": "Innovación y gestión"
+        "categoria": "Innovación y Gestión"
       },
       {
         "id": "8",
         "titulo": "¿Cómo conseguir tu primera oportunidad laboral en el área de la tecnología?",
-       "url": "https://www.youtube.com/watch?v=vBN-DQYu5RY",
-        "categoria": "Innovación y gestión"
+        "url": "https://www.youtube.com/watch?v=vBN-DQYu5RY",
+        "categoria": "Innovación y Gestión"
       },
       {
         "id": "9",
         "titulo": "Motivación y Buenos Hábitos: Claves para Estudiar con Éxito",
         "url": "https://www.youtube.com/watch?v=TNJbxPaB6cA",
-        "categoria": "Innovación y gestión"
+        "categoria": "Innovación y Gestión"
       }
+      
     ],
     "categorias": [
       {

@@ -1,6 +1,8 @@
-.container {
+.videos-section {
+    display: flex;
     padding: 0 0 1em 0;
     margin-top: .5em;
-    width: 282px;
-    background-color: var(--gris);
+    width: 100%;
+    
+    
 }

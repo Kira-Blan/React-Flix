@@ -15,24 +15,7 @@ import Footer from './componentes/Footer/Footer';
 function App() {
   const [mostarFormulario, actualizarMostrar] = useState(false)
   const [videos, actualizarVideos] = useState([
-    {
-    id: uuid(),
-    titulo: "Consejos de CSS FlexBox para comenzar",
-    url: "https://www.youtube.com/watch?v=EB4vWLzfVcI&t=2s",
-    categoria: "Front End"
-  },
-  {
-    id: uuid(),
-    titulo: "Creando una base de datos MySQL para tu proyecto Java con Spring",
-    url: "https://www.youtube.com/watch?v=59TU5iAd174",
-    categoria: "Back End"
-  },
-  {
-    id: uuid(),
-    titulo: "Consejos de CSS FlexBox para comenzar",
-    url: "https://www.youtube.com/watch?v=EB4vWLzfVcI&t=2s",
-    categoria: "Innovación y gestión"
-  }
+   
 ])
 
 const [seccionVideos, actualizarSeccionVideos] = useState([
@@ -76,14 +59,11 @@ const [seccionVideos, actualizarSeccionVideos] = useState([
     <div>
       <Header />
       <Banner />
-    {/*}  <MiFlix cambiarMostrar={cambiarMostrar} /> */}
+    
     <div>
      
       <Videos secciones={seccionVideos}
-     // datos={videos}
-     // key={videos.titulo}
-     // videos={videos.filter(videos => videos.videos === videos.titulo)}
-     // eliminarVideo={eliminarVideo}
+     
      />      
     </div>
     <Footer />
