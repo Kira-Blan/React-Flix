@@ -11,6 +11,6 @@ import AppRoutes from './routes'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
-    <AppRoutes/>
+    <AppRoutes />
   </StrictMode>
 )

@@ -5,6 +5,7 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 import Card from '../Card/Card'
 
+
 const getVideoId = (url) => {
     const regExp = /(?:https?:\/\/(?:www\.)?youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
     const match = url.match(regExp)
@@ -16,6 +17,7 @@ const Videos = (props) => {
     const [categorias, setCategorias] = useState([])
     const [videosPorCategoria, setVideosPorCategoria] = useState({})
     const { secciones } = props
+
 
     //Obtener los videos y las categorias
     useEffect(() => {
@@ -35,8 +37,11 @@ const Videos = (props) => {
 
                 //Agrupar videos por categoría
                 const grupedVideos = categoriasData.reduce((acc, categoria) => {
-                    acc[categoria.nombre] = videosData.filter(video => video.categoria === categoria.nombre)
+                    acc[categoria.nombre] = videosData.filter(
+                        (video) => video.categoria === categoria.nombre)
+
                     console.log('Categoría: ${categoria.nombre} -  Videos: `, acc[categoria.nombre]')
+
                     return acc
                 }, {})
 
@@ -48,32 +53,51 @@ const Videos = (props) => {
 
         fetchData()
     }, [])
-        console.log("Videos agrupados por categoría:", videosPorCategoria)
 
-        //Eliminar video
-        const manejarEliminar =async (id) => {
-            try {
-                await fetch(`http://localhost:3001/videos/${id}`, {
-                    method: 'DELETE', 
-                })
+    console.log("Videos agrupados por categoría:", videosPorCategoria)
 
-                //Actualizar estado
-                const updatedVideos = videos.filter((video) => video.id !== id)
-                setVideos(updatedVideos)
+    //Eliminar video
+    const manejarEliminar = async (id) => {
+        try {
+            await fetch(`http://localhost:3001/videos/${id}`, {
+                method: 'DELETE',
+            })
 
-                //Reorganizar videos por categoría
-                const updatedVideosPorCategoria = categorias.reduce((acc,categoria) => {
-                    acc[categoria.nombre] = updatedVideos.filter(
-                        (video) => video.categoria ===categoria.nombre
-                    )
-                    return acc
-                }, {})
+            //Actualizar estado de videos
+            const updatedVideos = videos.filter((video) => video.id !== id)
+            setVideos(updatedVideos)
 
-                setVideosPorCategoria(updatedVideosPorCategoria)
-            }catch (error) {
-                console.error('Error al eliminar video:', error)
-            }
+            //Reorganizar videos por categoría
+            const updatedVideosPorCategoria = categorias.reduce((acc, categoria) => {
+                acc[categoria.nombre] = updatedVideos.filter(
+                    (video) => video.categoria === categoria.nombre
+                )
+                return acc
+            }, {})
+
+            setVideosPorCategoria(updatedVideosPorCategoria)
+        } catch (error) {
+            console.error('Error al eliminar video:', error)
         }
+    }
+
+    // Función para agregar nuevos videos
+    const agregarVideo = (nuevoVideo) => {
+        setVideos((prevVideos) => {
+            const updatedVideos = [...prevVideos, nuevoVideo]
+
+            //Reorganizar videos por categría
+            const updatedVideosPorCategoria = categorias.reduce((acc, categoria) => {
+                acc[categoria.nombre] = updatedVideos.filter(
+                    (video) => video.categoria === categoria.nombre
+                )
+                return acc
+            }, {})
+
+            setVideosPorCategoria(updatedVideosPorCategoria)
+            return updatedVideos
+        })
+    }
 
     return (
         <div className='seccion-videos'>
@@ -104,7 +128,7 @@ const Videos = (props) => {
                                         className="delete-button"
                                         onClick={() => manejarEliminar(video.id)}
                                     >
-                                        <FontAwesomeIcon icon={faTrash} className='trash'/>
+                                        <FontAwesomeIcon icon={faTrash} className='trash' />
                                     </button>
                                 </div>
                             ))

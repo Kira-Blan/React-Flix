@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import '../Formulario/Formulario.css'
 import CampoTexto from '../CampoTexto/CampoTexto'
 import ListaOpciones from '../ListaOpciones/ListaOpciones'
@@ -10,40 +11,34 @@ const Formulario = (props) => {
     const [url, actualizarUrl] = useState('')
     const [categoria, actualizarCategoria] = useState("")
 
-    const { registrarVideo } = props
+    const { agregarVideo } = props
 
     const manejarEnvio = (evento) => {
         evento.preventDefault();
-        console.log('Datos enviados:', { titulo, url, categorias })
+        evento.target.reset()
+        actuarlizarTitulo('')
+        actualizarUrl('')
+        actualizarCategoria('')
+
+        console.log('Datos enviados:', { titulo, url, categoria })
 
         if (!titulo || !url || !categoria) {
             alert("Por favor completar todos los campos")
             return
         }
 
-        const datosAEnviar = {
+        const nuevoVideo = {
+            id: uuidv4(),
             titulo,
             url,
-            categoria,
-            video
-        }        
-        console.log(datosAEnviar)
+            categoria
+        }
+        console.log('Nuevo video a agregar:', nuevoVideo)
 
-        props.agregarVideo(datosAEnviar)
-
-        actuarlizarTitulo('')
-        actualizarUrl('')
-        actualizarCategoria('')
+        agregarVideo(nuevoVideo)
+        console.log('Video agregado')
     }
-   
 
-    
-    {/*const manejarCerrar = () => {       
-        cerrarFormulario()
-    }*/}
-
-    
-    
 
     return (
         <section className="formulario">
@@ -66,11 +61,11 @@ const Formulario = (props) => {
                 <ListaOpciones
                     valor={categoria}
                     actualizarCategoria={actualizarCategoria}
-                   
+
                 />
-                <Boton>Listo!</Boton>                
-           
-            </form>                                                    
+                <Boton type="submit">Listo!</Boton>
+
+            </form>
         </section>
     );
 };

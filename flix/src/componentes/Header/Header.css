@@ -1,46 +1,47 @@
 Header {
-    margin: 0;
-    padding: 0; 
-    box-sizing: border-box; 
-  }
-  
-  .header {
-      background-color: black;
-      height: 6rem;
-      width: 100%;
-      position: sticky;
-      top: 0;
-    }
-  
-    .logo {
-      float: left;
-      padding: 2rem 3rem 0;
-      max-width: 23%;
-      height: auto;
-    }
-    
-    .home, .nuevo-video {    
-      float: right;
-      width: 8.5rem;
-      height: 3rem;
-      margin: 1.5rem 3rem 0rem 0;   
-      border-radius: 15px;
-      border: blue solid 2px;
-    }   
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .formulario {
-      display: flex;
-      justify-content:end;    
-      padding-top: 6rem; 
-      width: 100%;  
-      
-  }
-  
-  .formulario form {
-      max-width: 100%;
-      background-color: cornflowerblue;
-      box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.8);
-      border-radius: 20px;
-      padding: 2rem 6rem;
-      height: 100%;
-  }
+.header {
+  background-color: black;
+  height: 6rem;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  float: left;
+  padding: 2rem 3rem 0;
+  max-width: 23%;
+  height: auto;
+}
+
+.home,
+.nuevo-video {
+  float: right;
+  width: 8.5rem;
+  height: 3rem;
+  margin: 1.5rem 3rem 0rem 0;
+  border-radius: 15px;
+  border: blue solid 2px;
+}
+
+.formulario {
+  display: flex;
+  justify-content: end;
+  padding-top: 6rem;
+  width: 80%;
+  height: auto;
+}
+
+.formulario form {
+  max-width: 100%;
+  background-color: cornflowerblue;
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  padding: 2rem 6rem;
+  height: 100%;
+}

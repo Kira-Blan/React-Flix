@@ -16,12 +16,12 @@ const Card = () => {
 
     return (
         <section className="videos-section">
-            
+
             {videos.length > 0 ? (
                 videos.map((videos) => (
                     <div key={videos.id} className="card">
                         <h3>{videos.titulo}</h3>
-                        
+
                         <img src={videos.imagen} alt={videos.titulo} />
                     </div>
                 ))

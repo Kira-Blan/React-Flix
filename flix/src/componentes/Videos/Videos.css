@@ -4,15 +4,15 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    padding: 2rem;   
-    box-sizing: border-box;   
-    height: auto;          
+    padding: 2rem;
+    box-sizing: border-box;
+    height: auto;
 }
 
 h1 {
     display: flex;
     justify-content: center;
-    padding: 2rem;
+    padding: 0 2rem 2rem;
     font-size: 4rem;
 }
 
@@ -22,27 +22,32 @@ h2 {
     margin-bottom: 1rem;
 }
 
-.seccion-videos h3 {    
-    font-size: 1.5rem;    
+.seccion-videos h3 {
+    font-size: 1.5rem;
     justify-content: center;
     display: inline-block;
     height: 3rem;
-    
 }
 
 .card {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    flex-wrap: wrap;      
+    flex-wrap: wrap;
+    padding: 1.5rem;
 }
 
 .iframe {
-    width: 30%;    
-    margin-bottom: 1rem;    
+    width: 30%;
+    margin-bottom: 1rem;
 }
 
-.trash{
+.trash {
     width: 1.5rem;
-    height: auto;   
+    height: auto;
+}
+
+.trash:hover,
+.iframe:hover {
+    transform: scale(1.15);
 }
